@@ -10,6 +10,8 @@ import javafx.stage.Stage;
 
 public class MainController {
 
+    Stage stage = new Stage();
+
     @FXML
     void onClickShowButton(ActionEvent event) {
         showDialog();
@@ -28,9 +30,11 @@ public class MainController {
     void tryshowDialog() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("dialogScene.fxml"));
         Scene scene = new Scene(loader.load());
-        Stage stage = new Stage();
+
         stage.setScene(scene);
         stage.show();
+        DialogController dialogController = loader.getController();
+        dialogController.setMainController(this);
 
     }
 }
