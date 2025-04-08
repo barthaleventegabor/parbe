@@ -12,11 +12,14 @@ import javafx.stage.Stage;
  * JavaFX App
  */
 public class App extends Application {
-
+    // ezt a staget mi hoztuk létre
+    static Stage _stage;
     private static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
+        // ez a másik kommenthez tartozik
+        _stage = stage; // ha nem static lenne kéne a this
         scene = new Scene(loadFXML("mainScene"), 640, 480);
         stage.setScene(scene);
         stage.show();
