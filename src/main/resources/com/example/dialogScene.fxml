@@ -14,6 +14,6 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="plateField" layoutX="125.0" layoutY="146.0" />
+      <TextField fx:id="plateField" layoutX="125.0" layoutY="146.0" onKeyReleased="#onKeyReleased" />
    </children>
 </Pane>
